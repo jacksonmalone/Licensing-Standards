@@ -1,0 +1,16 @@
+{{ block title }}
+    Result this round
+{{ endblock }}
+
+{{ block content }}
+    {{ if player.zeros_actual == player.number_entered and player.goal_set == True }}
+        Correct number, your payoff is {{ player.payoff }}! You need {{ goal }} left to meet your goal.
+    {{ elif player.zeros_actual == player.number_entered and player.goal_set == False }}
+        Correct number, your payoff is {{ player.payoff }}!
+    {{ elif player.zeros_actual != player.number_entered and player.goal_set == True }} 
+        Wrong number, your payoff is {{ player.payoff }}. You need {{ goal }} left to meet your goal.
+    {{ else }}
+        Wrong number, your payoff is {{ player.payoff }}.
+    {{ endif }}
+    {{ next_button }}
+{{ endblock }}

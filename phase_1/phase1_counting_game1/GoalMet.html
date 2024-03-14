@@ -1,0 +1,12 @@
+{{ block title }}
+    Goal Achieved
+{{ endblock }}
+{{ block content }}
+
+    Congratulations! You have successfully achieved your goal of {{ goal_set_amount }} tables.
+    You can either end the game or continue working.
+    <p>Do you want to end the game?</p>
+    <button name="game_done" value="True">Yes</button>
+    <button name="game_done" value="False">No</button>
+
+{{ endblock }}

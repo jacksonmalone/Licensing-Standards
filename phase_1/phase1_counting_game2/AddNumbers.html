@@ -1,0 +1,38 @@
+{{ block title }}
+    How many zeros are in the table?:
+{{ endblock }}
+{{ block content }}
+
+    <div class="parent">
+        <div class="child">
+            {{ matrix_table }}
+            <br>
+            {{ num_zeros }}
+        </div>
+        <div class="child">
+            {{ formfields }}
+            {{ if player.goal_set == True }}
+            <p>You have {{ goal }} table(s) left to meet your goal.</p>
+            {{ endif }}
+            {{ next_button }}
+        </div>
+    </div>
+
+    <style>
+        .parent {
+            display: flex;
+            width: 50%;
+        }
+
+        .child {
+            flex: 1;
+            margin: 0.75rem;
+        }
+
+        .child:first-child {
+            margin-right: 10rem;
+            font-size: large;
+        }
+
+    </style>
+{{ endblock }}

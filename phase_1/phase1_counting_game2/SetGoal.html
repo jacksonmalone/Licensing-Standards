@@ -1,0 +1,15 @@
+{{ block title }}
+    Set Goal
+{{ endblock }}
+{{ block content }}
+
+    You have the option to set your own goal to complete within the twenty minutes of the game.
+    This goal can be accepted and you will be reminded throughout the game how many more tables
+    need to be completed to meet the goal. You can set a goal and click the Yes button if you
+    would like to set the goal, or click the No button if you don't want to set a goal.
+    {{ formfield 'goal_set_amount' label="Set your goal here:" }}
+    <p>Do you want to set a goal?</p>
+    <button name="goal_set" value="True">Yes</button>
+    <button name="goal_set" value="False">No</button>
+
+{{ endblock }}
